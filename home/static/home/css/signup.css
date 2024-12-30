@@ -1,0 +1,71 @@
+body {
+    font-family: 'Arial', sans-serif;
+    /* background-color: gray; Primary background color */
+    background: linear-gradient(to right, #586beb, #cf2ddd),
+             radial-gradient(circle at 50% 50%, #921383 20%, #0f31da 80%);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* Text color */
+}
+
+h1 {
+    color: #2c3e50; /* Heading color */
+    margin-bottom: 20px;
+}
+
+/* Add styling for your signup form elements */
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff; /* Form background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #3498db; /* Border color */
+    border-radius: 5px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #2980b9; /* Highlight border color on focus */
+}
+
+button {
+    background-color: #2ecc71; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #27ae60; /* Darker background color on hover */
+}
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+a:hover {
+    background-color: #0056b3;
+}

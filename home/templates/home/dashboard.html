@@ -1,0 +1,113 @@
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Smart Parking System</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/dashboard.css' %}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- User profile icon -->
+        <div class="user-profile-icon" onclick="toggleSidebar()">
+            <img src="{% static 'home/images/user_icn.png' %}" alt="User Profile Icon">
+        </div>
+
+        <h1>Dashboard</h1>
+        
+        <div class="card" onclick="location.href='{% url 'book_slot' %}'">
+            <h2>Book a Slot</h2>
+            <p>Click here to book a parking slot</p>
+        </div>
+
+        <div class="card" onclick="location.href='{% url 'feedback' %}'">
+            <h2>Your Feedback</h2>
+            <p>Provide your valuable feedback</p>
+        </div>
+        <div class="card" onclick="location.href=''">
+            <h2>Find Your Slot</h2>
+            <p>find where your vehicle parked</p>
+        </div>
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <ul>
+                <li><a href="{% url 'signup' %}">Home</a></li>
+                <li><a href="{% url 'book_slot' %}">Book a Slot</a></li>
+                <li><a href="{% url 'feedback' %}">Feedback</a></li>
+                <li><a href="#">Exit</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var userProfileIcon = document.querySelector('.user-profile-icon');
+            var sidebar = document.getElementById('sidebar');
+    
+            userProfileIcon.addEventListener('click', toggleSidebar);
+    
+            function toggleSidebar() {
+                sidebar.classList.toggle('active');
+            }
+        });
+    </script>
+</body>
+</html> {% endcomment %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Smart Parking System</title>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'home/css/dashboard.css' %}">
+</head>
+<body>
+  <div class="dashboard-container">
+    <div class="user-profile-icon" onclick="toggleSidebar()">
+      <img src="{% static 'home/images/user_icn.png' %}" alt="User Profile Icon">
+    </div>
+
+    <h1>Dashboard</h1>
+
+    <div class="card" onclick="location.href='{% url 'available_slot' %}'">
+      <h2>Book a Slot</h2>
+      <p>Click here to book a parking slot</p>
+    </div>
+
+    <div class="card" onclick="location.href='{% url 'feedback' %}'">
+      <h2>Your Feedback</h2>
+      <p>Provide your valuable feedback</p>
+    </div>
+
+    <div class="card" onclick="location.href='{% url 'find_spot' %}'">
+      <h2>Find Your Slot</h2>
+      <p>find where your vehicle parked</p>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+      <ul>
+        <li><a href="{% url 'signup' %}">Home</a></li>
+        <li><a href="{% url 'available_slot' %}">Book a Slot</a></li>
+        <li><a href="{% url 'feedback' %}">Feedback</a></li>
+        <li><a href="#">Exit</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // Check if the DOM is fully loaded before attaching the event listener
+    document.addEventListener('DOMContentLoaded', function () {
+      var userProfileIcon = document.querySelector('.user-profile-icon'); // Verify element selection using console.log(userProfileIcon)
+      var sidebar = document.getElementById('sidebar');
+
+      userProfileIcon.addEventListener('click', toggleSidebar);
+
+      function toggleSidebar() {
+        sidebar.classList.toggle('active');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!-- your_app/templates/home/signup.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - Smart Parking System</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/signup.css' %}">
+</head>
+<body>
+    <h1>Signup Page</h1>
+    <form method="POST" action="{% url 'signup' %}">
+        {% csrf_token %}
+        <!-- Your signup form goes here -->
+        <label for="username">Email:</label>
+        <input type="text" id="Email" name="Email" placeholder="Enter your Email" required onkeyup="this.setAttribute('value',this.value);" value="">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required onkeyup="this.setAttribute('value',this.value);" value="">
+
+        {% comment %} <button type="submit"><a href="{% url 'dashboard' %}">submit</a></button> {% endcomment %}
+        <a href="{% url 'dashboard' %}">submit</a>
+    </form>
+</body>
+</html>

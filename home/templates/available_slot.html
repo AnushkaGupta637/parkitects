@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Slots</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/available.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background: linear-gradient(to right, #586beb, #cf2ddd),
+             radial-gradient(circle at 50% 50%, #921383 20%, #0f31da 80%);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            color:white;
+            background-color: black;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color:white;
+            background-color: black;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Available Slots</h1>
+    <!-- <button >R1</button> -->
+    <a href="{% url 'book_slot' %}">R1</a>
+    <!-- <button >R2</button> -->
+    <a href="{% url 'book_slot' %}">R2</a>
+    <br><br>
+    <!-- <button>R3</button> -->
+    <a href="{% url 'book_slot' %}">R3</a>
+    <!-- <button>R4</button> -->
+    <a href="{% url 'book_slot' %}">R4</a>
+    <br><br>
+    <!-- <button>R5</button> -->
+    <a href="{% url 'book_slot' %}">R5</a>
+    <!-- <button>R6</button> -->
+    <a href="{% url 'book_slot' %}">R6</a>
+    <br><br>
+    <!-- <button>R7</button> -->
+    <a href="{% url 'book_slot' %}">R7</a>
+    <!-- <button>R8</button> -->
+    <a href="{% url 'book_slot' %}">R8</a>
+    <br><br>
+    <!-- <button>R9</button> -->
+    <a href="{% url 'book_slot' %}">R9</a>
+    <!-- <button>R10</button> -->
+    <a href="{% url 'book_slot' %}">R10</a>
+    <ul>
+        {% for slot in available_slots %}
+            <li>
+                Slot {{ slot.slot_number }}
+                {% if not slot.booked %}
+                    <a href="{% url 'book_slot' slot.slot_number %}">Book Now</a>
+                {% else %}
+                    Booked
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
+

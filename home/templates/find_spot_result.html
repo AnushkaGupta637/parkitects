@@ -1,0 +1,63 @@
+{% comment %} <!-- parking/templates/find_spot_result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Spot Result</title>
+</head>
+<body>
+    {% if error_message %}
+        <p>{{ error_message }}</p>
+    {% else %}
+        <p>Slot Number: {{ slot_number }}</p>
+        <p>Vehicle Plate Number: {{ plate_number }}</p>
+    {% endif %}
+    <a href="{% url 'find_spot' %}">Go Back</a>
+</body>
+</html> {% endcomment %}
+
+<!-- parking/templates/find_slot_result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Slot Result</title>
+    <style>
+        /* parking/static/css/find_slot_result.css */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .slot-info {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Your Slot Number</h1>
+    <div class="slot-info">
+        <p>Your assigned slot number is: R1</p>
+    </div>
+</body>
+</html>

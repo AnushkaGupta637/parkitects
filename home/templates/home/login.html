@@ -1,0 +1,66 @@
+<!-- parking_app/templates/parking_app/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Parking System</title>
+    
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/style.css' %}">
+</head>
+<body>
+    <h1>Welcome to Smart Parking System</h1>
+    <img src="{% static 'home/images/img4.jpg' %}" alt="Smart Parking Image">
+    <h3>Book your parking without any Hustle</h3>
+    <a href="{% url 'signup' %}">Get Started</a>
+</body>
+</html>
+
+
+<!-- 
+{% comment %} {% extends 'home/base.html' %}
+
+{% block content %}
+  <h2>Login</h2>
+   Your login form goes here -->
+<!-- {% endblock %} {% endcomment %} --> 
+
+
+
+
+<!-- 
+<style>
+    body {
+font-family: 'Arial', sans-serif;
+background-color: #f0f0f0;
+text-align: center;
+margin: 0;
+padding: 0;
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+h1 {
+    color: #333;
+}
+a {
+display: inline-block;
+padding: 10px 20px;
+margin-top: 20px;
+background-color: #007BFF;
+color: #fff;
+text-decoration: none;
+border-radius: 5px;
+transition: background-color 0.3s ease;
+}
+a:hover {
+background-color: #0056b3;
+img {
+        max-width: 100%;  /* Ensure the image doesn't exceed its container */
+        margin-top: 20px; /* Add some space above the image */
+    }
+}
+</style> -->

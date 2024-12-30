@@ -1,0 +1,43 @@
+<!-- slot_booked.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot Booked</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/slot_booked.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: green;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Slot Booked Successfully!</h1>
+    <p>Your parking slot has been booked.</p>
+    <p>Thank you for using our service.</p>
+    <a href="{% url 'dashboard' %}">Back to Dashboard</a>
+</body>
+</html>
